@@ -6,3 +6,5 @@ venv/
 *.pyc
 
 controle_gastos/settings.py
+
+db.sqlite3

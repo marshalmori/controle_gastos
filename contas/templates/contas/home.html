@@ -6,8 +6,17 @@
 </head>
 
 <body>
-<h1> Seja bem vindo...</h1>
 
+<h2>Listagem</h2>
+
+<ul>
+{% for transacao in transacoes %}
+    <li>{{ transacao.descricao }} - {{ transacao.data }} -
+     R$ {{ transacao.valor }} - {{ transacao.categoria }}</li>
+{% endfor %}
+</ul>
+
+<a href='{% url 'url_nova' %}'>Nova</a>
 </body>
 
 </html>

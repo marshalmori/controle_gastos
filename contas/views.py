@@ -15,3 +15,17 @@ def nova_transacao(request):
         form.save()
         return redirect('home')
     return render(request, 'contas/form.html', {'form': form})
+
+def update(request, pk):
+    transacao = Transacao.objects.get(pk=pk)
+    form = TransacaoForm(request.POST or None, instance=transacao)
+
+    if form.is_valid():
+        form.save()
+        return redirect('home')
+    return render(request, 'contas/form.html', {'form': form, 'transacao': transacao})
+
+def delete(request, pk):
+    transacao = Transacao.objects.get(pk=pk)
+    transacao.delete()
+    return redirect('home')

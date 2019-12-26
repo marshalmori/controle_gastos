@@ -8,3 +8,5 @@ venv/
 controle_gastos/settings.py
 
 db.sqlite3
+
+contas/migrations/*.py

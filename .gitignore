@@ -1,0 +1,8 @@
+# virtualenv
+
+venv/
+.vscode
+
+*.pyc
+
+controle_gastos/settings.py
